@@ -69,7 +69,7 @@ TextureImporter:
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
-    textureCompression: 1
+    textureCompression: 2
     compressionQuality: 50
     crunchedCompression: 0
     allowsAlphaSplitting: 0
@@ -3178,7 +3178,7 @@ TextureImporter:
         width: 55
         height: 59
       alignment: 9
-      pivot: {x: 0.47042957, y: 0.22011326}
+      pivot: {x: 0.57279885, y: 0.15119216}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -5657,7 +5657,7 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Environment_204: -1590265896
+      Environment_215: 545434116
       Environment_76: -1496210363
       Environment_251: -738951652
       Environment_27: -2055623228
@@ -5690,9 +5690,9 @@ TextureImporter:
       Environment_259: -500961793
       Environment_35: 1604207893
       Environment_39: -1855894154
+      Environment_42: -172316298
       Environment_33: -1181238468
       Environment_227: -1514922625
-      Environment_42: -172316298
       Environment_133: 843920488
       Environment_128: -335103154
       Environment_104: 1677788914
@@ -5813,22 +5813,22 @@ TextureImporter:
       Environment_9: -960848504
       Environment_157: -613895948
       Environment_144: 1952812733
-      Environment_187: -1899567118
+      Environment_31: -1514447754
       Environment_158: -1950286044
       Environment_162: 609168786
+      Environment_187: -1899567118
       Environment_213: -569333203
       Environment_256: -1225376646
-      Environment_31: -1514447754
+      Environment_219: 1959279228
       Environment_97: -222475948
       Environment_61: 134704614
       Environment_22: 314968021
       Environment_93: 1205635069
       Environment_248: 1150868679
-      Environment_219: 1959279228
+      Environment_264: 971571895
       Environment_206: 1033885601
       Environment_91: 1162457237
       Environment_236: -464338994
-      Environment_264: 971571895
       Environment_164: 860214239
       Environment_109: -539443265
       Environment_169: -495839164
@@ -5925,8 +5925,8 @@ TextureImporter:
       Environment_18: 1907789497
       Environment_77: 1513512842
       Environment_234: 1632493590
-      Environment_215: 545434116
       Environment_10: -1775280077
+      Environment_204: -1590265896
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 0
