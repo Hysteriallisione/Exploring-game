@@ -14,6 +14,8 @@ public class pierreDePierre : MonoBehaviour
     public TagAttribute Tronc;
     public TagAttribute bush;
     public GameObject daBomb;
+    private bool colliderDP;
+    private Collider2D target;
 
     public bool RollingP
     {
@@ -33,10 +35,11 @@ public class pierreDePierre : MonoBehaviour
     {
         rigidB = GetComponent<Rigidbody2D>();
         animaPierre = gameObject.GetComponent<Animator>();
-
-
+        target = null;
+        colliderDP = false;
 
     }
+
     private void FixedUpdate()
     {
 
@@ -48,14 +51,26 @@ public class pierreDePierre : MonoBehaviour
         {
             rigidB.MovePosition(rigidB.position + veloDePierre * Time.fixedDeltaTime);
         }
-        if (Input.GetKeyDown(KeyCode.Joystick1Button0))
+       
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Tronc") || collision.gameObject.CompareTag("bush"))
         {
-            // instantiate daBomb comme enfant de tag Tronc ou tag Bush (ou pierreDePierre) 
-            //animaPierre.SetBool("boum",true);
+            colliderDP = true;
+            target = collision;
         }
     }
-        // Update is called once per frame
-        void Update()
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Tronc") || collision.gameObject.CompareTag("bush"))
+        {
+            colliderDP = false;
+            target = null;
+        }
+    }
+    // Update is called once per frame
+    void Update()
         {
             animaPierre.SetBool("pierreIsMoving", false);
             bool pierreIsMoving = false;
@@ -90,7 +105,7 @@ public class pierreDePierre : MonoBehaviour
                 RollingP = true;
                 //Debug.Log("je suis presséééééé");
             }
-            if (Input.GetKeyUp(KeyCode.JoystickButton1) && pierreIsMoving == true)
+            if (Input.GetKeyUp(KeyCode.JoystickButton1) && pierreIsMoving)
             {
                 RollingP = false;
                 pierreIsMoving = true;
@@ -102,10 +117,18 @@ public class pierreDePierre : MonoBehaviour
                 pierreIsMoving = false;
                 Debug.Log("je relaaache Ze benjamin button");
             }
-
-
-
+             if (Input.GetKeyDown(KeyCode.JoystickButton0) && colliderDP)
+             {
+          
+                 GameObject c = Instantiate(daBomb, target.transform);
+            // instantiate daBomb comme enfant de tag Tronc ou tag Bush 
+                 c.transform.localPosition = Vector2.zero;
+                 //animaPierre.SetBool("boum",true);
         }
+
+
+
+    }
 
 
     }
