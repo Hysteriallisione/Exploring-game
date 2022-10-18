@@ -96,6 +96,7 @@ GameObject:
   - component: {fileID: -3361610942862433312}
   - component: {fileID: 8495817832546024609}
   - component: {fileID: 7900200012203200185}
+  - component: {fileID: 1578717436761114795}
   m_Layer: 0
   m_Name: buiDP
   m_TagString: Untagged
@@ -187,6 +188,26 @@ CircleCollider2D:
   m_Offset: {x: 0.040950775, y: -0.013650894}
   serializedVersion: 2
   m_Radius: 1.1989479
+--- !u!95 &1578717436761114795
+Animator:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4163465319306080074}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4b6a42e5c0a0e444a9405ee4e9b6449b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5593627431728648072
 GameObject:
   m_ObjectHideFlags: 0
